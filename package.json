@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Weaver-K/NoteTaker.git"
+    "url": "git+https://github.com/Weaver-K/Thinkboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Weaver-K/NoteTaker/issues"
+    "url": "https://github.com/Weaver-K/Thinkboard/issues"
   },
-  "homepage": "https://github.com/Weaver-K/NoteTaker#readme"
+  "homepage": "https://github.com/Weaver-K/Thinkboard#readme"
 }

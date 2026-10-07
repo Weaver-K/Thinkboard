@@ -1,5 +1,24 @@
 {
   "devDependencies": {
     "prettier": "3.9.9"
-  }
+  },
+  "name": "thinkboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".prettierrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weaver-K/NoteTaker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Weaver-K/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/Weaver-K/NoteTaker#readme"
 }

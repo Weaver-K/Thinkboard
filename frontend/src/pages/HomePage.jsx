@@ -12,13 +12,21 @@ const HomePage = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        let isMounted = true
+
         const fetchNotes = async () => {
             try {
+                setLoading(true)
                 const res = await api.get('/notes')
+
+                if (!isMounted) return
+
                 console.log(res.data)
                 setNotes(res.data)
                 setIsRateLimited(false)
             } catch (error) {
+                if (!isMounted) return
+
                 console.log('Error fetching notes')
                 console.log(error)
                 if (error.response?.status === 429) {
@@ -27,12 +35,18 @@ const HomePage = () => {
                     toast.error('Failed to load notes')
                 }
             } finally {
-                setLoading(false)
+                if (isMounted) {
+                    setLoading(false)
+                }
             }
         }
 
         fetchNotes()
-    })
+
+        return () => {
+            isMounted = false
+        }
+    }, [])
 
     return (
         <div className="min-h-screen">
